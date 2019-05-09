@@ -16,7 +16,7 @@ import java.util.List;
 public class WeeklyCardAdapter extends RecyclerView.Adapter<WeeklyCardAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<WeeklyContainers> waterContainersList;
+    private List<WeeklyContainers> weeklyContainers;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, count;
@@ -32,9 +32,9 @@ public class WeeklyCardAdapter extends RecyclerView.Adapter<WeeklyCardAdapter.My
     }
 
 
-    public WeeklyCardAdapter(Context mContext, List<WeeklyContainers> waterContainersList) {
+    public WeeklyCardAdapter(Context mContext, List<WeeklyContainers> weeklyContainers) {
         this.mContext = mContext;
-        this.waterContainersList = waterContainersList;
+        this.weeklyContainers = weeklyContainers;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class WeeklyCardAdapter extends RecyclerView.Adapter<WeeklyCardAdapter.My
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        WeeklyContainers waterContainers = waterContainersList.get(position);
+        WeeklyContainers waterContainers = weeklyContainers.get(position);
         holder.title.setText(waterContainers.getName());
         holder.count.setText(waterContainers.getCapacity() + " songs");
 
@@ -68,6 +68,7 @@ public class WeeklyCardAdapter extends RecyclerView.Adapter<WeeklyCardAdapter.My
 
     @Override
     public int getItemCount() {
-        return waterContainersList.size();
+        return weeklyContainers.size();
     }
 }
+
