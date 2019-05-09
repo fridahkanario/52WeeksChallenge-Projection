@@ -4,16 +4,16 @@ package com.example.a52weekchallenge;
 // model class denoting the week container properties
 public class WeeklyContainers {
     private String name;
-    private int capacity;
-    private int thumbnail;
+    private float deposit;
+    private float total;
 
     public WeeklyContainers() {
     }
 
-    public WeeklyContainers(String name, int capacity, int thumbnail) {
+    public WeeklyContainers(String name, int deposit, int total) {
         this.name = name;
-        this.capacity = capacity;
-        this.thumbnail = thumbnail;
+        this.deposit = deposit;
+        this.total = total;
     }
 
     public String getName() {
@@ -24,19 +24,20 @@ public class WeeklyContainers {
         this.name = name;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public float getDeposit() {
+        return deposit;
     }
 
-    public void setCapacity(int numOfSongs) {
-        this.capacity = numOfSongs;
+    public void setDeposit(float deposit) {
+        this.deposit = deposit;
     }
 
-    public int getThumbnail() {
-        return thumbnail;
+    public float getTotal() {
+        return total;
     }
 
-    public void setThumbnail(int thumbnail) {
-        this.thumbnail = thumbnail;
+    public void setTotal(float total) {
+        this.total = total;
     }
 }
+
